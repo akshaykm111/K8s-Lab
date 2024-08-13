@@ -7,7 +7,7 @@ metadata:
 spec:
   selector:
     matchLabels:
-      app: vprapp
+      app: vproapp
   replicas: 1
   template:
     metadata:
