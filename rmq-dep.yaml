@@ -7,7 +7,7 @@ metadata:
 spec:
   selector:
     matchLabels:
-      app: vprmq01
+      app: vpromq01
   replicas: 1
   template:
     metadata:
