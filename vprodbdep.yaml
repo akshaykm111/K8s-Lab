@@ -17,18 +17,18 @@ spec:
       containers:
       - name: vprodb
         image: kubeakshay111/vprofiledb:V1
-          volumeMounts:
-          - mountPath: /var/lib/mysql
-            name: vpro-db-data
-          ports:
+        volumeMounts:
+        - mountPath: /var/lib/mysql
+          name: vpro-db-data
+        ports:
           - name: vprodb-port
             containerPort: 3306
-          env:
-          - name: MYSQL_ROOT_PASSWORD
-            valueFrom:
-              secretKeyRef:
-                name: app-secret
-                key: db-pass
+        env:
+        - name: MYSQL_ROOT_PASSWORD
+          valueFrom:
+            secretKeyRef:
+              name: app-secret
+              key: db-pass
       nodeSelector:
          zone: us-west-2a
       volumes:
